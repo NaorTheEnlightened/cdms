@@ -1,7 +1,7 @@
 // controllers/authController.js
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import User from '../models/User';
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
 exports.register = async (req, res) => {
   try {

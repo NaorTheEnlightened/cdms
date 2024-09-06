@@ -1,6 +1,6 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import AppRoutes from './routes/index.route.tsx';
+import AppRoutes from './routes/index.route.jsx';
 
 const App = () => {
   return (

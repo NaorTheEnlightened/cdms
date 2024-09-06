@@ -1,5 +1,6 @@
 // middleware/auth.js
-import jwt from 'jsonwebtoken';
+// import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 
 module.exports = function (req, res, next) {
   // Get token from header

@@ -1,7 +1,7 @@
 // routes/auth.js
-import express from 'express';
-import passport from 'passport';
-import jwt from 'jsonwebtoken';
+const express = require('express');
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 const { register, login } = require('../controllers/authController');
@@ -18,10 +18,11 @@ router.get(
     // Successful authentication, redirect or send JWT
     const token = jwt.sign(
       { user: { id: req.user.id } },
-      process.env.JWT_SECRET,
+      // process.env.JWT_SECRET,
+      'GOCSPX-secret',
       { expiresIn: '1h' },
     );
-    res.json({ token });
+    res.redirect(`/oauth/callback?token=${token}`);
   },
 );
 
@@ -37,10 +38,11 @@ router.get(
     // Successful authentication, redirect or send JWT
     const token = jwt.sign(
       { user: { id: req.user.id } },
-      process.env.JWT_SECRET,
+      // process.env.JWT_SECRET,
+      'secret',
       { expiresIn: '1h' },
     );
-    res.json({ token });
+    res.redirect(`/oauth/callback?token=${token}`);
   },
 );
 

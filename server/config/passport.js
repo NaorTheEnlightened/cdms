@@ -1,8 +1,10 @@
 // config/passport.js
-import passport from 'passport';
-import GoogleStrategy from 'passport-google-oauth20';
-import GitHubStrategy from 'passport-github2';
-import User from '../models/User';
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20');
+const GitHubStrategy = require('passport-github2');
+const User = require('../models/User');
+const dotenv = require('dotenv');
+dotenv.config();
 
 passport.use(
   new GoogleStrategy(

@@ -1,5 +1,6 @@
 // routes/users.js
-import express from 'express';
+const express = require('express');
+
 const router = express.Router();
 const {
   getCurrentUser,

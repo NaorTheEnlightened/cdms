@@ -1,5 +1,5 @@
 // controllers/userController.js
-import User from '../models/User';
+const User = require('../models/User');
 
 exports.getCurrentUser = async (req, res) => {
   try {
