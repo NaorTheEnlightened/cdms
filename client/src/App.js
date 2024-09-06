@@ -1,24 +1,13 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import Dashboard from './components/Dashboard';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import AppRoutes from './routes/index.route.tsx';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/dashboard" component={Dashboard} />
-        </Switch>
-      </div>
-    </Router>
+    <div className="container">
+      <AppRoutes />
+    </div>
   );
-}
+};
 
 export default App;
